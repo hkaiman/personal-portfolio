@@ -18,8 +18,8 @@ const Flutter = ({ size, ...props }: IconSvgProps) => {
           y2="52.9192657%"
           id="linearGradient-1"
         >
-          <stop stop-color="#000000" offset="0%"></stop>
-          <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+          <stop stopColor="#000000" offset="0%"></stop>
+          <stop stopColor="#000000" stopOpacity="0" offset="100%"></stop>
         </linearGradient>
       </defs>
       <g>
@@ -40,7 +40,7 @@ const Flutter = ({ size, ...props }: IconSvgProps) => {
           points="71.5995742 230.364072 120.401085 181.562561 169.842046 230.821136 121.132827 279.531454"
         ></polygon>
         <polygon
-          fill-opacity="0.8"
+          fillOpacity="0.8"
           fill="url(#linearGradient-1)"
           points="121.132827 279.531454 161.692896 266.072227 165.721875 234.941308"
         ></polygon>

@@ -15,7 +15,8 @@ const About = () => {
     <section className="flex flex-col items-center justify-center gap-3">
       <div className="flex gap-3 items-center">
         <Avatar
-          src="https://drive.google.com/thumbnail?id=1g5BGJKUtnBPnJuHvtOMgU4BPHQW2gvjW"
+          src="/img/avatar.jpeg"
+          // src="https://drive.google.com/thumbnail?id=1g5BGJKUtnBPnJuHvtOMgU4BPHQW2gvjW"
           className="w-40 h-40 text-large"
         />
       </div>
@@ -24,7 +25,7 @@ const About = () => {
       </div>
 
       <div className="flex items-center justify-center gap-3 py-5">
-        {/* <Link
+      {/* <Link
 					isExternal
 					href={siteConfig.links.docs}
 					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}

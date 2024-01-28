@@ -41,34 +41,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   }, []);
 
   return hydrationLoad ? (
-    <Card
-    className="w-full p-5 relative space-y-5 overflow-hidden"
-    radius="lg"
-  >
-    <div className="max-w-[300px] w-full flex items-center gap-3">
-      <div>
-        <Skeleton className="flex rounded-full w-12 h-12" />
+    <Card className="w-full p-5 relative space-y-5 overflow-hidden" radius="lg">
+      <div className="max-w-[300px] w-full flex items-center gap-3">
+        <div>
+          <Skeleton className="flex rounded-full w-12 h-12" />
+        </div>
+        <div className="w-full flex flex-col gap-2">
+          <Skeleton className="h-3 w-3/5 rounded-lg" />
+          <Skeleton className="h-3 w-4/5 rounded-lg" />
+        </div>
       </div>
-      <div className="w-full flex flex-col gap-2">
-        <Skeleton className="h-3 w-3/5 rounded-lg" />
-        <Skeleton className="h-3 w-4/5 rounded-lg" />
+      <div className="space-y-3">
+        <Skeleton className="w-2/5 rounded-lg">
+          <div className="h-3 w-2/5 rounded-lg bg-default-200"></div>
+        </Skeleton>
       </div>
-    </div>
-    <div className="space-y-3">
-      <Skeleton className="w-2/5 rounded-lg">
-        <div className="h-3 w-2/5 rounded-lg bg-default-200"></div>
-      </Skeleton>
-    </div>
-    <div className="max-w-[300px] w-full flex flex-row gap-5">
-      <Skeleton className="h-8 w-3/5 rounded-lg" />
-      <Skeleton className="h-8 w-3/5 rounded-lg" />
-      <Skeleton className="h-8 w-3/5 rounded-lg" />
-    </div>
-    <div className="max-w-[300px] w-full flex flex-row gap-5">
-      <Skeleton className="h-10 w-3/5 rounded-lg" />
-      <Skeleton className="h-10 w-3/5 rounded-lg" />
-    </div>
-  </Card>
+      <div className="max-w-[300px] w-full flex flex-row gap-5">
+        <Skeleton className="h-8 w-3/5 rounded-lg" />
+        <Skeleton className="h-8 w-3/5 rounded-lg" />
+        <Skeleton className="h-8 w-3/5 rounded-lg" />
+      </div>
+      <div className="max-w-[300px] w-full flex flex-row gap-5">
+        <Skeleton className="h-10 w-3/5 rounded-lg" />
+        <Skeleton className="h-10 w-3/5 rounded-lg" />
+      </div>
+    </Card>
   ) : (
     <Card isPressable className="w-full p-5 relative overflow-hidden">
       <CardHeader className="flex gap-3 relative z-10">
@@ -98,7 +95,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               color="primary"
               variant="flat"
               size="sm"
-              className="mb-2 md:mb-0 md:mr-2"
+              className={`mb-2 md:mb-0 ${
+                index !== 0 ? "md:mr-2 ml-1" : "md:mr-2"
+              }`}
             >
               {tech}
             </Button>

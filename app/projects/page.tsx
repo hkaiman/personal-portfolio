@@ -1,9 +1,10 @@
 import { title } from "@/components/primitives";
+import Projects from "@/components/sections/Projects";
 
 export default function PricingPage() {
 	return (
 		<div>
-			<h1 className={title()}>Pricing</h1>
+			<Projects />
 		</div>
 	);
 }

@@ -91,3 +91,7 @@ export const subtitle = tv({
     fullWidth: true
   }
 });
+
+export const link = tv({
+		base: "tracking-tight inline font-semibold max-w-full w-full my-2",
+})
