@@ -21,7 +21,7 @@ import { GithubIcon, LinkedInIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useReducer((current) => !current, false);
 
   return (
     <NextUINavbar
@@ -92,7 +92,7 @@ export const Navbar = () => {
             <NavbarMenuItem
               key={`${item}-${index}`}
             >
-              <Link color={"foreground"} href={item.href} size="lg">
+              <Link color={"foreground"} href={item.href} size="lg" onPress={() => setIsMenuOpen()}>
                 {item.label}
               </Link>
             </NavbarMenuItem>
