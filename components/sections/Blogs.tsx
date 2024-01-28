@@ -33,7 +33,7 @@ const Blogs = async () => {
           const slug =
             article.properties?.Slug?.rich_text[0]?.text.content || "";
           return (
-            <Link href={`/blog/${slug}`} color="foreground" className="block">
+            <Link key={index} href={`/blog/${slug}`} color="foreground" className="block">
               <Col key={index} xs={12} md={4}>
                 {index > 0 && (
                   <Divider
