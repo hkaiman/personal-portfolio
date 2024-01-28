@@ -111,6 +111,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           as={Link}
           variant="ghost"
           size="lg"
+          isExternal={true}
           showAnchorIcon
           anchorIcon={<Code />}
         >
