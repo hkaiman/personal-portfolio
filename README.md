@@ -1,17 +1,17 @@
-# Next.js & NextUI Template
+# Personal Portfolio Site
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+This is a personal portfolio site using Next.js 14 (app directory), NextUI (v2) and Notion.
 
 ## Technologies Used
 
-- [Next.js 13](https://nextjs.org/docs/getting-started)
+- [Next.js 14](https://nextjs.org/docs/getting-started)
 - [NextUI v2](https://nextui.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Variants](https://tailwind-variants.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
-
+- [Notion](https://notion.so)
 ## How to Use
 
 
@@ -20,7 +20,7 @@ This is a template for creating applications using Next.js 13 (app directory) an
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+npx create-next-app -e https://github.com/heykarlz/personal-portfolio
 ```
 
 ### Install dependencies
@@ -28,6 +28,12 @@ npx create-next-app -e https://github.com/nextui-org/next-app-template
 ```bash
 npm install
 ```
+
+### Setup Notion as backend
+
+1. Create a .env.local file at the root of the directory.
+2. Declare two secrets: NOTION_TOKEN and NOTION_DATABASE_ID.
+3. Get both secrets by registering for Notion and insert the value.
 
 ### Run the development server
 
