@@ -5,8 +5,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import BlogCard from "../cards/BlogCard";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
-const Blogs = async () => {
-  const articles = await getPages();
+
+interface Article {
+  title: string;
+  date: string;
+  description: string;
+}
+
+const Blogs: React.FC<{ articles: Article[] }> = ({ articles }) => {
 
   return (
     <section className="text-center justify-center">
