@@ -10,6 +10,7 @@ interface Article {
   title: string;
   date: string;
   description: string;
+  slug: string;
 }
 
 const Blogs: React.FC<{ articles: Article[] }> = ({ articles }) => {
@@ -22,24 +23,27 @@ const Blogs: React.FC<{ articles: Article[] }> = ({ articles }) => {
       <div className="grid grid-cols-1 gap-x-10 gap-y-12">
         {articles.length == 0 && (
           <div className="mt-10">
-            <h1 className={subtitle()}>It seems that the author is having a rest..</h1>
+            <h1 className={subtitle()}>
+              It seems that the author is having a rest..
+            </h1>
           </div>
         )}
         {articles.map((article, index) => {
-          const formattedDate = article.properties?.Date?.date.start
-            ? new Date(article.properties.Date.date.start).toLocaleDateString(
-                "en-US",
-                {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                }
-              )
+          const formattedDate = article.date
+            ? new Date(article.date).toLocaleDateString("en-US", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })
             : "N/A";
-          const slug =
-            article.properties?.Slug?.rich_text[0]?.text.content || "";
+          const slug = article.slug || "";
           return (
-            <Link key={index} href={`/blog/${slug}`} color="foreground" className="block">
+            <Link
+              key={index}
+              href={`/blog/${slug}`}
+              color="foreground"
+              className="block"
+            >
               <Col key={index} xs={12} md={4}>
                 {index > 0 && (
                   <Divider
@@ -49,13 +53,12 @@ const Blogs: React.FC<{ articles: Article[] }> = ({ articles }) => {
                 )}
                 <BlogCard
                   title={
-                    article.properties?.Title?.title[0]?.plain_text ||
+                    article.title ||
                     "Untitled"
                   }
                   date={formattedDate}
                   description={
-                    article.properties?.Description?.rich_text[0]?.text
-                      .content || ""
+                    article.description || ""
                   }
                 />
               </Col>

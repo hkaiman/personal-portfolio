@@ -7,11 +7,32 @@ import {
 } from "@notionhq/client/build/src/api-endpoints";
 import { cache } from "react";
 
+interface Article {
+  object: string;
+  id: string;
+  created_time: string;
+  last_edited_time: string;
+  created_by: any; 
+  last_edited_by: any; 
+  cover: any;
+  icon: any;
+  parent: any; 
+  archived: boolean;
+  properties: {
+    Title: { title: Array<{ plain_text: string }> };
+    Date: { date: { start: string } };
+    Description: { rich_text: Array<{ text: { content: string } }> };
+    Slug: { rich_text: Array<{ text: { content: string } }> };
+  };
+  url: string;
+  public_url: any;
+}
+
 export const notionClient = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-export const getPages = cache(async () => {
+export const getPages = cache(async (): Promise<Article[]> => {
   const response = await notionClient.databases.query({
     filter: {
       property: "Status",
@@ -28,7 +49,7 @@ export const getPages = cache(async () => {
     database_id: process.env.NOTION_DATABASE_ID!,
   });
 
-  return response.results;
+  return response.results as Article[];
 });
 
 export const getPageContent = cache((pageId: string) => {
