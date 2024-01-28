@@ -15,7 +15,7 @@ const About = () => {
     <section className="flex flex-col items-center justify-center gap-3">
       <div className="flex gap-3 items-center">
         <Avatar
-          src="/img/avatar.jpeg"
+          src="/img/avatar.png"
           // src="https://drive.google.com/thumbnail?id=1g5BGJKUtnBPnJuHvtOMgU4BPHQW2gvjW"
           className="w-40 h-40 text-large"
         />
