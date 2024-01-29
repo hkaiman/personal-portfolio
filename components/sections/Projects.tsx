@@ -1,21 +1,8 @@
 "use client";
 
-import { title, subtitle, description } from "@/components/primitives";
+import { title } from "@/components/primitives";
 import React from "@/components/icons/React";
-import Flutter from "@/components/icons/Flutter";
-import Java from "@/components/icons/Java";
-import Laravel from "@/components/icons/Laravel";
-import MySQL from "@/components/icons/MySQL";
-import Firebase from "@/components/icons/Firebase";
-import { SkillCard } from "@/components/cards/SkillCard";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Skeleton,
-} from "@nextui-org/react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import ProjectCard from "../cards/ProjectCard";
 
 const ProjectDetails = [

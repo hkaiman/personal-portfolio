@@ -1,15 +1,9 @@
 "use client";
 
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  CardFooter,
-  Image,
-  Button,
-  Divider,
-  Link,
-} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+import {Button} from "@nextui-org/button";
+import {Link} from "@nextui-org/link";
+import {Divider} from "@nextui-org/divider";
 import { title, subtitle, description } from "@/components/primitives";
 
 const Mixer = () => {

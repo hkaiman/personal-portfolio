@@ -1,20 +1,10 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Slider,
-  Image,
-  Button,
-  Link,
-  Divider,
-  Chip,
-  Skeleton,
-} from "@nextui-org/react";
-
+import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+import {Image} from "@nextui-org/image";
+import {Button} from "@nextui-org/button";
+import {Link} from "@nextui-org/link";
+import {Skeleton} from "@nextui-org/skeleton";
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { motion } from "framer-motion";
+import {Row} from "react-bootstrap";
 import Code from "@/components/icons/Code";
 
 interface ProjectCardProps {

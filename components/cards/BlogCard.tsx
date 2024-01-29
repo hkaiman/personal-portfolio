@@ -1,17 +1,3 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Slider,
-  Image,
-  Button,
-  Link,
-  Divider,
-  Chip,
-  Skeleton,
-} from "@nextui-org/react";
-
 interface BlogCardProps {
   title: string;
   date: string;

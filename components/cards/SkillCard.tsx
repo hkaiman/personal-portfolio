@@ -1,25 +1,25 @@
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
-import { Button, Link } from "@nextui-org/react";
-import { button as buttonStyles } from "@nextui-org/theme";
 import React from "react";
-import {
-  ArrowTopRightOnSquareIcon,
-  ArrowUpRightIcon,
-  LockClosedIcon,
-} from "@heroicons/react/24/solid";
-import { motion } from "framer-motion";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
-type SkillContentType = 'React' | 'Flutter' | 'Firebase' | 'Laravel' | 'MySQL' | 'Java' | 'Git';
+type SkillContentType =
+  | "React"
+  | "Flutter"
+  | "Firebase"
+  | "Laravel"
+  | "MySQL"
+  | "Java"
+  | "Git";
 
 const colorMappings: Record<SkillContentType, string[]> = {
-  React: ['#61DAFB', '#282C34'],
-  Flutter: ['#87CEEB', '#1E90FF'],
-  Firebase: ['#FFD700', '#FFA500'],
-  Laravel: ['#FF6347', '#8B0000'],
-  MySQL: ['#1E90FF', '#FFA500', '#000080'],
-  Java: ['#FFA500', '#87CEEB'],
-  Git: ['#F05032', '#F05032'],
+  React: ["#61DAFB", "#282C34"],
+  Flutter: ["#87CEEB", "#1E90FF"],
+  Firebase: ["#FFD700", "#FFA500"],
+  Laravel: ["#FF6347", "#8B0000"],
+  MySQL: ["#1E90FF", "#FFA500", "#000080"],
+  Java: ["#FFA500", "#87CEEB"],
+  Git: ["#F05032", "#F05032"],
 };
 
 interface SkillCardProps {
@@ -28,7 +28,6 @@ interface SkillCardProps {
   shortUrl: string;
   url: string;
   image: React.ReactNode | string;
-  level?: number;
 }
 
 export const SkillCard: React.FC<SkillCardProps> = ({
@@ -37,15 +36,14 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   shortUrl,
   url,
   image,
-  level,
 }) => {
-  const gradientColors = (content: SkillContentType): string[] => colorMappings[content] || ['#000000', '#000000'];
+  const gradientColors = (content: SkillContentType): string[] =>
+    colorMappings[content] || ["#000000", "#000000"];
   const colors = gradientColors(name as SkillContentType);
   return (
     <Card
       isPressable
       className="max-w-[400px] p-3"
-      
       style={{
         borderTop: `2px solid`,
         borderImage: `linear-gradient(to right, ${colors.join(", ")})`,

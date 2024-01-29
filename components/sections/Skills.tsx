@@ -23,7 +23,6 @@ const ProgrammingSkills = [
     shortUrl: "react.dev",
     url: "https://react.dev/",
     image: <React width={size} height={size} />,
-    level: 7,
   },
   {
     name: "Flutter",
@@ -32,7 +31,6 @@ const ProgrammingSkills = [
     shortUrl: "flutter.dev",
     url: "https://flutter.dev/",
     image: <Flutter width={size} height={size} />,
-    level: 7,
   },
   {
     name: "Firebase",
@@ -41,7 +39,6 @@ const ProgrammingSkills = [
     shortUrl: "firebase.google.com",
     url: "https://firebase.google.com/",
     image: <Firebase width={size} height={size} />,
-    level: 7,
   },
   {
     name: "Laravel",
@@ -50,7 +47,6 @@ const ProgrammingSkills = [
     shortUrl: "laravel.com",
     url: "https://laravel.com/",
     image: <Laravel width={size} height={size} />,
-    level: 7,
   },
   {
     name: "MySQL",
@@ -59,7 +55,6 @@ const ProgrammingSkills = [
     shortUrl: "mysql.com",
     url: "https://www.mysql.com/",
     image: <MySQL width={size} height={size} />,
-    level: 5,
   },
   {
     name: "Java",
@@ -68,7 +63,6 @@ const ProgrammingSkills = [
     shortUrl: "java.com",
     url: "https://www.java.com/en/",
     image: <Java width={size} height={size} />,
-    level: 5,
   },
   {
     name: "Git",
@@ -77,7 +71,6 @@ const ProgrammingSkills = [
     shortUrl: "git-scm.com",
     url: "https://git-scm.com/",
     image: <Git width={size} height={size} />,
-    level: 5,
   },
 ];
 
@@ -97,7 +90,6 @@ const Skills = () => {
                 shortUrl={skill.shortUrl}
                 url={skill.url}
                 image={skill.image}
-                level={skill.level}
               />
             </Col>
           </Link>
