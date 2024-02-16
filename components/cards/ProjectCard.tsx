@@ -1,17 +1,19 @@
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
-import {Image} from "@nextui-org/image";
-import {Button} from "@nextui-org/button";
-import {Link} from "@nextui-org/link";
-import {Skeleton} from "@nextui-org/skeleton";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Image } from "@nextui-org/image";
+import { Button } from "@nextui-org/button";
+import { Link } from "@nextui-org/link";
+import { Skeleton } from "@nextui-org/skeleton";
 import React, { useState, useEffect } from "react";
-import {Row} from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import Code from "@/components/icons/Code";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 
 interface ProjectCardProps {
   name: string;
   date: string;
   description: string;
-  url: string;
+  githubUrl: string;
+  siteUrl?: string;
   image: React.ReactNode | string;
   techs: string[];
 }
@@ -20,7 +22,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
   date,
   description,
-  url,
+  githubUrl,
+  siteUrl,
   image,
   techs,
 }) => {
@@ -97,7 +100,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <CardFooter>
         <Button
           color="primary"
-          href={url}
+          href={githubUrl}
           as={Link}
           variant="ghost"
           size="lg"
@@ -107,6 +110,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           Source Code
         </Button>
+
+        {siteUrl && (
+          <Button
+            className="ml-5"
+            color="primary"
+            href={siteUrl}
+            as={Link}
+            variant="ghost"
+            size="lg"
+            isExternal={true}
+            showAnchorIcon
+          >
+            View App
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

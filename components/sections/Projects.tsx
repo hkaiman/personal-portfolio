@@ -7,10 +7,28 @@ import ProjectCard from "../cards/ProjectCard";
 
 const ProjectDetails = [
   {
+    name: "Diskusi",
+    date: "February 2024",
+    description: "A Reddit clone web application created using Next.js.",
+    githubUrl: "https://github.com/heykarlz/diskusi",
+    image: "/img/diskusi.png",
+    tech: [
+      "Next.js",
+      "React",
+      "ShadcnUI",
+      "TIDB",
+      "Upstash",
+      "Prisma",
+      "MySQL",
+      "Tailwind",
+    ],
+    siteUrl: "https://diskusi.vercel.app/",
+  },
+  {
     name: "Personal Portfolio",
     date: "January 2024",
     description: "A personal portfolio site created using Next.js and Notion.",
-    url: "https://github.com/heykarlz/personal-portfolio",
+    githubUrl: "https://github.com/heykarlz/personal-portfolio",
     image: <React width={50} height={50} />,
     tech: ["Next.js", "NextUI", "Framer Motion", "Notion"],
   },
@@ -19,7 +37,7 @@ const ProjectDetails = [
     date: "June 2023 - December 2023",
     description:
       "A mobile application developed to help households manage and streamline chores while fostering community engagement among members.",
-    url: "https://github.com/heykarlz/household_management_system_public",
+    githubUrl: "https://github.com/heykarlz/household_management_system_public",
     image: "/img/household.png",
     tech: ["Flutter", "Firebase"],
   },
@@ -28,7 +46,7 @@ const ProjectDetails = [
     date: "September 2022 - October 2022",
     description:
       "A cinema booking system designed to enable users to seamlessly reserve movie tickets and administrators to efficiently manage ticket operations.",
-    url: "https://github.com/heykarlz/cinema-booking-system",
+    githubUrl: "https://github.com/heykarlz/cinema-booking-system",
     image: "/img/syne.png",
     tech: ["Java SE", "Servlet", "JavaScript"],
   },
@@ -37,7 +55,7 @@ const ProjectDetails = [
     date: "September 2022 - October 2022",
     description:
       "A school management system tailored for streamlined student registration and effective teacher management.",
-    url: "https://github.com/heykarlz/school_management_system",
+    githubUrl: "https://github.com/heykarlz/school_management_system",
     image: "/img/school.png",
     tech: ["Java SE", "Servlet", "JavaScript", "ChartJS"],
   },
@@ -46,7 +64,7 @@ const ProjectDetails = [
     date: "September 2021",
     description:
       "A gaming store system which enable user to buy games and make payment.",
-    url: "https://github.com/heykarlz/gaming-store-system",
+    githubUrl: "https://github.com/heykarlz/gaming-store-system",
     image: "/img/gx.png",
     tech: ["Java Swing", "Netbeans GUI"],
   },
@@ -65,7 +83,8 @@ const Projects = () => {
               name={project.name}
               date={project.date}
               description={project.description}
-              url={project.url}
+              githubUrl={project.githubUrl}
+              siteUrl={project.siteUrl}
               image={project.image}
               techs={project.tech}
             />
