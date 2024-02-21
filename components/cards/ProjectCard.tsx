@@ -12,7 +12,7 @@ interface ProjectCardProps {
   name: string;
   date: string;
   description: string;
-  githubUrl: string;
+  githubUrl?: string;
   siteUrl?: string;
   image: React.ReactNode | string;
   techs: string[];
@@ -98,22 +98,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </Row>
       </CardBody>
       <CardFooter>
-        <Button
-          color="primary"
-          href={githubUrl}
-          as={Link}
-          variant="ghost"
-          size="lg"
-          isExternal={true}
-          showAnchorIcon
-          anchorIcon={<Code />}
-        >
-          Source Code
-        </Button>
-
+        {githubUrl && (
+          <Button
+            color="primary"
+            href={githubUrl}
+            as={Link}
+            variant="ghost"
+            size="lg"
+            isExternal={true}
+            showAnchorIcon
+            anchorIcon={<Code />}
+          >
+            Source Code
+          </Button>
+        )}
         {siteUrl && (
           <Button
-            className="ml-5"
+            className={githubUrl ? 'ml-5' : ''}
             color="primary"
             href={siteUrl}
             as={Link}
