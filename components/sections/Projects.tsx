@@ -7,6 +7,22 @@ import ProjectCard from "../cards/ProjectCard";
 
 const ProjectDetails = [
   {
+    name: "Semak Kata Kesat",
+    date: "Jun 2024",
+    description: "A web application to detect profanity word in Malay language.",
+    githubUrl: "https://github.com/heykarlz/kata-kesat-frontend",
+    image: "/img/semak-kata-kesat.png",
+    tech: [
+      "Next.js",
+      "Hono.js",
+      "React",
+      "ShadcnUI",
+      "Upstash",
+      "Tailwind",
+    ],
+    siteUrl: "https://semak-kata-kesat.vercel.app/",
+  },
+  {
     name: "Diskusi",
     date: "February 2024",
     description: "A Reddit clone web application created using Next.js.",
