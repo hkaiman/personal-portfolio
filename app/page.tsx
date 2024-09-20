@@ -12,7 +12,6 @@ export default function Home() {
       <Mixer />
       <Skills />
       <Projects />
-      {/* <Journey /> */}
     </>
   );
 }

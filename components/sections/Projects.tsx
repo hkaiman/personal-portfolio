@@ -32,11 +32,9 @@ const ProjectDetails = [
       "Next.js",
       "React",
       "ShadcnUI",
-      "TIDB",
       "Upstash",
       "Prisma",
       "MySQL",
-      "Tailwind",
     ],
     siteUrl: "https://diskusi.vercel.app/",
   },
@@ -67,33 +65,33 @@ const ProjectDetails = [
     image: "/img/household.png",
     tech: ["Flutter", "Firebase"],
   },
-  {
-    name: "Mockup Cinema Booking System",
-    date: "September 2022 - October 2022",
-    description:
-      "A cinema booking system designed to enable users to seamlessly reserve movie tickets and administrators to efficiently manage ticket operations.",
-    githubUrl: "https://github.com/heykarlz/cinema-booking-system",
-    image: "/img/syne.png",
-    tech: ["Java SE", "Servlet", "JavaScript"],
-  },
-  {
-    name: "Mockup School Management System",
-    date: "September 2022 - October 2022",
-    description:
-      "A school management system tailored for streamlined student registration and effective teacher management.",
-    githubUrl: "https://github.com/heykarlz/school_management_system",
-    image: "/img/school.png",
-    tech: ["Java SE", "Servlet", "JavaScript", "ChartJS"],
-  },
-  {
-    name: "Gaming Store System",
-    date: "September 2021",
-    description:
-      "A gaming store system which enable user to buy games and make payment.",
-    githubUrl: "https://github.com/heykarlz/gaming-store-system",
-    image: "/img/gx.png",
-    tech: ["Java Swing", "Netbeans GUI"],
-  },
+  // {
+  //   name: "Mockup Cinema Booking System",
+  //   date: "September 2022 - October 2022",
+  //   description:
+  //     "A cinema booking system designed to enable users to seamlessly reserve movie tickets and administrators to efficiently manage ticket operations.",
+  //   githubUrl: "https://github.com/heykarlz/cinema-booking-system",
+  //   image: "/img/syne.png",
+  //   tech: ["Java SE", "Servlet", "JavaScript"],
+  // },
+  // {
+  //   name: "Mockup School Management System",
+  //   date: "September 2022 - October 2022",
+  //   description:
+  //     "A school management system tailored for streamlined student registration and effective teacher management.",
+  //   githubUrl: "https://github.com/heykarlz/school_management_system",
+  //   image: "/img/school.png",
+  //   tech: ["Java SE", "Servlet", "JavaScript", "ChartJS"],
+  // },
+  // {
+  //   name: "Gaming Store System",
+  //   date: "September 2021",
+  //   description:
+  //     "A gaming store system which enable user to buy games and make payment.",
+  //   githubUrl: "https://github.com/heykarlz/gaming-store-system",
+  //   image: "/img/gx.png",
+  //   tech: ["Java Swing", "Netbeans GUI"],
+  // },
 ];
 
 const Projects = () => {
@@ -102,7 +100,7 @@ const Projects = () => {
       <div className="items-center inline-block max-w-lg text-center justify-center mb-10">
         <h2 className={title()}>Projects</h2>
       </div>
-      <div className="grid grid-cols-1 gap-x-10 gap-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
         {ProjectDetails.map((project, index) => (
           <Col key={index} xs={12} md={4}>
             <ProjectCard

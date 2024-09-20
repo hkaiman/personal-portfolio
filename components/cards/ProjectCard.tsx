@@ -109,12 +109,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             showAnchorIcon
             anchorIcon={<Code />}
           >
-            Source Code
+            <span className="hidden md:inline">Source Code</span>
+            <span className="inline md:hidden">Code</span>
           </Button>
         )}
         {siteUrl && (
           <Button
-            className={githubUrl ? 'ml-5' : ''}
+            className={githubUrl ? "ml-5" : ""}
             color="primary"
             href={siteUrl}
             as={Link}
@@ -123,7 +124,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             isExternal={true}
             showAnchorIcon
           >
-            View App
+            <span className="hidden md:inline">View App</span>
+            <span className="inline md:hidden">View</span>
           </Button>
         )}
       </CardFooter>
