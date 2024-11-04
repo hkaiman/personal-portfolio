@@ -20,7 +20,7 @@ This is a personal portfolio site using Next.js 14 (app directory), NextUI (v2) 
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/heykarlz/personal-portfolio
+npx create-next-app -e https://github.com/hkaiman/personal-portfolio
 ```
 
 ### Install dependencies

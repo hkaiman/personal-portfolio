@@ -72,7 +72,7 @@ export const siteConfig = {
 		linkedin: "https://www.linkedin.com/in/haikal-mohd-puat/",
     resume:
       "https://drive.google.com/file/d/1D8nZVQIjX3oSYP88mkQN_Zi7qOu50gTS/view?usp=sharing",
-    github: "https://github.com/heykarlz",
+    github: "https://github.com/hkaiman",
     twitter: "https://twitter.com/getnextui",
     docs: "https://nextui.org",
     discord: "https://discord.gg/9b6yyZKmH4",
