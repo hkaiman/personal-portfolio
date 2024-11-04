@@ -71,7 +71,7 @@ export const siteConfig = {
     email: "mailto:haikalmohdpuat@gmail.com",
 		linkedin: "https://www.linkedin.com/in/haikal-mohd-puat/",
     resume:
-      "https://drive.google.com/file/d/1D8nZVQIjX3oSYP88mkQN_Zi7qOu50gTS/view?usp=sharing",
+      "https://drive.google.com/file/d/1NMp6SKK6uy1HMVEU1Olvj-DXMQP6yxyx/view?usp=sharing",
     github: "https://github.com/hkaiman",
     twitter: "https://twitter.com/getnextui",
     docs: "https://nextui.org",
