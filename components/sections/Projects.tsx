@@ -20,7 +20,25 @@ const ProjectDetails = [
       "Upstash",
       "Tailwind",
     ],
-    siteUrl: "https://semak-kata-kesat.vercel.app/",
+    siteUrl: "https://semak-kata-kesat.haikalaiman.dev",
+  },
+  {
+    name: "Hikayaat",
+    date: "2025",
+    description:
+      "An interactive web application that tells the stories of Islamic Golden Age scholars and caliphates, from Khulafa ar-Rashidun to the Ottoman Empire.",
+    image: <React width={50} height={50} />,
+    tech: ["Next.js", "React", "Tailwind"],
+    siteUrl: "https://hikayaat.vercel.app",
+  },
+  {
+    name: "Infraquest",
+    date: "2026",
+    description:
+      "An interactive learning platform that explains software engineering and networking concepts, such as client-server architecture, DNS, and load balancers, through visual 3D simulations.",
+    image: <React width={50} height={50} />,
+    tech: ["Next.js", "React", "Three.js", "Tailwind"],
+    siteUrl: "https://infraquest.vercel.app",
   },
   {
     name: "Diskusi",
