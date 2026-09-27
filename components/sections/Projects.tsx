@@ -38,16 +38,14 @@ const ProjectDetails = [
     ],
     siteUrl: "https://diskusi.vercel.app/",
   },
-  {
-    name: "DK Car Auto",
-    date: "February 2024",
-    description: "A simple landing page for car dealer company.",
-    image: "/img/dkcarauto.png",
-    tech: [
-      "React",
-    ],
-    siteUrl: "https://dkautocar.com/",
-  },
+  // {
+  //   name: "DK Car Auto",
+  //   date: "February 2024",
+  //   description: "A simple landing page for car dealer company.",
+  //   image: "/img/dkcarauto.png",
+  //   tech: ["React"],
+  //   siteUrl: "https://dkautocar.com/",
+  // },
   {
     name: "Personal Portfolio",
     date: "January 2024",
